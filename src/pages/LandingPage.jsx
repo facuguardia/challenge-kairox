@@ -12,7 +12,7 @@ function LandingPage() {
       <div className="p-4">
         <nav className="flex justify-between items-center">
           <div>
-            <img src={ImgLogo} alt="" className="w-28" />
+            <img src={ImgLogo} alt="" className="w-24" />
           </div>
           <div>
             <ul className="flex items-center gap-7 text-[#39ff14] text-xl">

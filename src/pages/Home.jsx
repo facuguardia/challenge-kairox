@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { allCharacters } from "../API/getApi";
+// API
+import { allCharacters } from "../api/getApi";
+// Components
+import CharacterList from "../components/CharacterList";
+import Spinner from "../components/Spinner";
 
 function Home() {
   // Estado para guardar los personajes
@@ -9,6 +13,8 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   // Estado para guardar el término de búsqueda
   const [searchTerm, setSearchTerm] = useState("");
+  // Estado para guardar los personajes seleccionados
+  const [selectedCharacters, setSelectedCharacters] = useState([]);
 
   useEffect(() => {
     // Llamamos a la función que nos devuelve los personajes
@@ -21,6 +27,10 @@ function Home() {
     setCurrentPage(1);
   }, [searchTerm]);
 
+  // Función para manejar el click en un personaje
+  const handleCharacterSelect = (character) => {
+    setSelectedCharacters([...selectedCharacters, character]);
+  };
 
   // Función para cambiar de página
   const handlePageChange = (newPage) => {
@@ -37,30 +47,49 @@ function Home() {
       <h1>Home</h1>
       {/* Input de búsqueda */}
       <input type="text" value={searchTerm} onChange={handleSearch} />
+      {/* <Link to={"/character-list"}>
+        <h2>List</h2>
+      </Link> */}
       {/* Mapeo de los personajes */}
       {characters !== null ? (
         <>
-          {Array.isArray(characters) && characters.length > 0 ? characters.map((character, index) => {
-            return (
-              <div key={index}>
-                <Link to={`/character/${character.name}`}>{character.name}</Link>
-              </div>
-            );
-          }) : null }
+          {Array.isArray(characters) && characters.length > 0
+            ? characters.map((character, index) => {
+                return (
+                  <div key={index}>
+                    <Link
+                      to="/"
+                      // to={`/character/${character.name}`}
+                      onClick={() => handleCharacterSelect(character)}
+                    >
+                      {character.name}
+                    </Link>
+                  </div>
+                );
+              })
+            : null}
           {/* Botones para cambiar de página */}
           <div>
             {characters.previous !== null && (
-              <button onClick={() => handlePageChange(currentPage - 1)}>Previous</button>
+              <button onClick={() => handlePageChange(currentPage - 1)}>
+                Previous
+              </button>
             )}
             {characters.next !== null && (
-              <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
+              <button onClick={() => handlePageChange(currentPage + 1)}>
+                Next
+              </button>
             )}
           </div>
         </>
       ) : (
         // Mensajo de carga
-        <p>Loading...</p>
+        <div>
+          <Spinner />
+        </div>
       )}
+      {/* Lista de personajes seleccionados */}
+      <CharacterList characters={selectedCharacters} />
     </div>
   );
 }

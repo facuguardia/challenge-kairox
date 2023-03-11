@@ -9,12 +9,12 @@ const allCharacters = async (state, currentPage, searchTerm) => {
   state(response.data.results);
 };
 
-// const characterName = async (name, state) => {
-//   const response = await axios.get(`https://swapi.dev/api/people/?search=${name}`);
-//   state(response.data);
-// }
+const characterName = async (name, state) => {
+  const response = await axios.get(`https://swapi.dev/api/people/search=${name}}`);
+  state(response.data);
+}
 
 export {
   allCharacters,
-  // characterName
+  characterName
 };

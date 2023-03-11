@@ -4,7 +4,7 @@ function CharacterList({ characters }) {
   return (
     <>
       {characters.map((character) => (
-        <div key={character.name}>
+        <div key={character.id}>
           <p>Name: {character.name}</p>
           <p>Height: {character.height}</p>
           <p>Mass: {character.mass}</p>

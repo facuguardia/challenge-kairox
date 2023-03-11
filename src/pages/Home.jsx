@@ -108,12 +108,12 @@ function Home() {
         {/* Botones para cambiar de página */}
         {characters !== null && characters.previous !== null && (
           <button onClick={() => handlePageChange(currentPage - 1)}>
-            <MdKeyboardDoubleArrowLeft className="hover:text-blue-400 transform hover:scale-125" />
+            <MdKeyboardDoubleArrowLeft className="hover:text-blue-400 transform hover:scale-125 transition-all" />
           </button>
         )}
         {characters !== null && characters.next !== null && (
           <button onClick={() => handlePageChange(currentPage + 1)}>
-            <MdKeyboardDoubleArrowRight className="hover:text-blue-400 transform hover:scale-125" />
+            <MdKeyboardDoubleArrowRight className="hover:text-blue-400 transform hover:scale-125 transition-all" />
           </button>
         )}
       </div>

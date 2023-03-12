@@ -85,7 +85,6 @@ function Home() {
                       className="flex justify-center text-[#39ff14] hover:text-blue-400 "
                     >
                       <Link
-                        // to="/"
                         to={`/character/${character.name}`}
                         onClick={() => handleCharacterSelect(character)}
                       >

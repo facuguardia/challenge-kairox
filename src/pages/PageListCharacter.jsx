@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import CharacterList from "../components/CharacterList";
 // Icons
 import { IoIosArrowBack } from "react-icons/io";
+// Images
+import ImgLogo from "../assets/logo.png";
 
 function PageListCharacter() {
   const navigate = useNavigate();
@@ -18,9 +20,11 @@ function PageListCharacter() {
         <button onClick={handleBack}>
           <IoIosArrowBack className="text-2xl hover:text-blue-400 transform hover:scale-125 transition-all" />
         </button>
-        <h1 className=" text-2xl text-[#39ff14]">Favorites</h1>
+        <div>
+          <img src={ImgLogo} alt="logo star wars" className="w-24" />
+        </div>
       </div>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 text-[#39ff14]">
         <CharacterList />
       </div>
     </div>

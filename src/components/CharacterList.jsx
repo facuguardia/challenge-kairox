@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+// Context
+import AppContext from "../context/AppContext";
 
-function CharacterList({ characters }) {
+function CharacterList() {
+  const { selectedCharacters } = useContext(AppContext);
   return (
     <>
-      {characters.map((character) => (
-        <div key={character.id}>
+      {selectedCharacters.map((character) => (
+        <div key={character.name} className="flex flex-col items-center gap-2 p-10">
           <p>Name: {character.name}</p>
           <p>Height: {character.height}</p>
           <p>Mass: {character.mass}</p>

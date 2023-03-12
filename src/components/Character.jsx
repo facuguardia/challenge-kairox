@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+// Context
+import AppContext from "../context/AppContext";
 // API
 import { characterName } from "../api/getApi";
 
 function Character() {
-  const [character, setCharacter] = useState(null);
-  console.log(character);
+  const { character } = useContext(AppContext);
   const params = useParams();
-  console.log(params);
   const navigate = useNavigate();
 
   useEffect(() => {
-    characterName(params.name, setCharacter);
+    characterName(params.name);
   }, []);
 
   function handleBack() {

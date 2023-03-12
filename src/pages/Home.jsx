@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+// Context
+import AppContext from "../context/AppContext";
 // API
 import { allCharacters } from "../api/getApi";
 // Components
-// import CharacterList from "../components/CharacterList";
 import Spinner from "../components/Spinner";
 // Images
 import ImgLogo from "../assets/logo.png";
@@ -15,14 +16,16 @@ import {
 import { BiSearch } from "react-icons/bi";
 
 function Home() {
-  // Estado para guardar los personajes
-  const [characters, setCharacters] = useState(null);
-  // Estado para guardar la página actual
-  const [currentPage, setCurrentPage] = useState(1);
-  // Estado para guardar el término de búsqueda
-  const [searchTerm, setSearchTerm] = useState("");
-  // Estado para guardar los personajes seleccionados
-  const [selectedCharacters, setSelectedCharacters] = useState([]);
+  const {
+    characters,
+    setCharacters,
+    currentPage,
+    setCurrentPage,
+    searchTerm,
+    setSearchTerm,
+    selectedCharacters,
+    setSelectedCharacters,
+  } = useContext(AppContext);
 
   useEffect(() => {
     // Llamamos a la función que nos devuelve los personajes
@@ -70,10 +73,6 @@ function Home() {
         </div>
       </div>
 
-      {/* <Link to={"/character-list"}>
-        <h2>List</h2>
-      </Link> */}
-
       <div className="grid grid-cols-3 items-center gap-4 w-full h-full">
         {/* Mapeo de los personajes */}
         {characters !== null ? (
@@ -117,8 +116,6 @@ function Home() {
           </button>
         )}
       </div>
-      {/* Lista de personajes seleccionados */}
-      {/* <CharacterList characters={selectedCharacters} /> */}
     </div>
   );
 }

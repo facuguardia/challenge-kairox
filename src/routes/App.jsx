@@ -7,11 +7,16 @@ import LandingPage from "../pages/LandingPage";
 import Character from "../components/Character";
 // Context
 import AppContext from "../context/AppContext";
+import useApp from "../hooks/useApp";
 
 function App() {
+  // Obtengo el contexto de la app
+  const app = useApp();
+
   return (
     <div>
-      <AppContext.Provider value={{}}>
+      {/* Se lo paso al value */}
+      <AppContext.Provider value={app}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<Home />} />

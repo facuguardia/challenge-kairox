@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 // Context
 import AppContext from "../context/AppContext";
@@ -58,7 +58,7 @@ function Home() {
       <div className="flex justify-between items-center w-full p-5">
         <div>
           <Link to="/">
-            <img src={ImgLogo} alt="logo star wars" className="w-24" />
+            <img src={ImgLogo} alt="Logo Star Wars" className="w-24" />
           </Link>
         </div>
         <div className="">
@@ -109,6 +109,7 @@ function Home() {
             <MdKeyboardDoubleArrowLeft className="hover:text-blue-400 transform hover:scale-125 transition-all" />
           </button>
         )}
+        {currentPage}
         {characters !== null && characters.next !== null && (
           <button onClick={() => handlePageChange(currentPage + 1)}>
             <MdKeyboardDoubleArrowRight className="hover:text-blue-400 transform hover:scale-125 transition-all" />

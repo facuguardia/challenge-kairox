@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 // Components
 import CharacterList from "../components/CharacterList";
@@ -21,10 +20,10 @@ function PageListCharacter() {
           <IoIosArrowBack className="text-2xl hover:text-blue-400 transform hover:scale-125 transition-all" />
         </button>
         <div>
-          <img src={ImgLogo} alt="logo star wars" className="w-24" />
+          <img src={ImgLogo} alt="Logo Star Wars" className="w-24" />
         </div>
       </div>
-      <div className="grid grid-cols-3 text-[#39ff14]">
+      <div className="grid grid-cols-3 gap-4 text-[#39ff14]">
         <CharacterList />
       </div>
     </div>

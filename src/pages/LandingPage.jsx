@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// Assets
+// Images
 import ImgLanding from "../assets/landing.png";
 import ImgLogo from "../assets/logo.png";
 // Icons
@@ -14,7 +14,7 @@ function LandingPage() {
       <div className="p-4">
         <nav className="flex justify-between items-center">
           <div>
-            <img src={ImgLogo} alt="" className="w-24" />
+            <img src={ImgLogo} alt="Logo Star Wars" className="w-24" />
           </div>
           <div className="pr-4">
             <ul className="flex items-center gap-7 text-white text-xl">
@@ -44,7 +44,7 @@ function LandingPage() {
         </nav>
       </div>
 
-      {/* Hero */}
+      {/* Main */}
       <div className="flex justify-between items-center px-7 pb-5">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-[80px] text-white text-center font-semibold pb-5">
@@ -57,7 +57,7 @@ function LandingPage() {
           </Link>
         </div>
         <div>
-          <img src={ImgLanding} alt="" className="" />
+          <img src={ImgLanding} alt="Nave Star Wars" />
         </div>
         <div>
           <ul className="flex flex-col justify-center gap-4 text-2xl text-[#39ff14] font-medium ">

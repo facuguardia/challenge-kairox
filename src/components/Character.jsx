@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 // Context
 import AppContext from "../context/AppContext";
 // Components
@@ -43,7 +43,7 @@ function Character() {
               <img src={ImgLogo} alt="logo star wars" className="w-24" />
             </div>
           </div>
-          <div className="flex flex-col items-center gap-2 p-10">
+          <div className="flex flex-col gap-2 p-10 text-[#39ff14] text-2xl font-medium ">
             <p>Name: {character.name}</p>
             <p>Height: {character.height}</p>
             <p>Mass: {character.mass}</p>

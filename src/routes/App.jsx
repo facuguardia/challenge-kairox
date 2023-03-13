@@ -10,12 +10,10 @@ import AppContext from "../context/AppContext";
 import useApp from "../hooks/useApp";
 
 function App() {
-  // Obtengo el contexto de la app
   const app = useApp();
 
   return (
     <div>
-      {/* Se lo paso al value */}
       <AppContext.Provider value={app}>
         <Routes>
           <Route path="/" element={<LandingPage />} />

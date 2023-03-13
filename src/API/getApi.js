@@ -16,5 +16,5 @@ const characterName = async (name, state) => {
 
 export {
   allCharacters,
-  characterName
+  characterName,
 };

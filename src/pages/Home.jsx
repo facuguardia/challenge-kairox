@@ -109,7 +109,6 @@ function Home() {
             <MdKeyboardDoubleArrowLeft className="hover:text-blue-400 transform hover:scale-125 transition-all" />
           </button>
         )}
-        {currentPage}
         {characters !== null && characters.next !== null && (
           <button onClick={() => handlePageChange(currentPage + 1)}>
             <MdKeyboardDoubleArrowRight className="hover:text-blue-400 transform hover:scale-125 transition-all" />

@@ -73,7 +73,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 items-center gap-4 w-full h-full">
+      <div className="grid grid-cols-2 lg:grid-cols-3 items-center gap-4 w-full h-full">
         {/* Mapeo de los personajes */}
         {characters !== null ? (
           <>

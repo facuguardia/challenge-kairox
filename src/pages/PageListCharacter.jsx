@@ -23,7 +23,7 @@ function PageListCharacter() {
           <img src={ImgLogo} alt="Logo Star Wars" className="w-24" />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 text-[#39ff14]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-[#39ff14]">
         <CharacterList />
       </div>
     </div>

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+// Components
+import MenuMobile from "../components/MenuMobile";
 // Images
 import ImgLanding from "../assets/landing.png";
 import ImgLogo from "../assets/logo.png";
@@ -9,6 +11,10 @@ import { IoIosArrowForward } from "react-icons/io";
 function LandingPage() {
   return (
     <div className="w-full h-full flex flex-col justify-between">
+      {/* Menu Mobile */}
+      <div>
+        <MenuMobile />
+      </div>
 
       {/* Navbar */}
       <div className="p-4">
@@ -46,7 +52,7 @@ function LandingPage() {
 
       {/* Main */}
       <div className="flex justify-between items-center px-7 pb-5">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center md:pt-[50%] lg:pt-[0%]">
           <h1 className="text-[80px] text-white text-center font-semibold pb-5">
             Come to the dark side
           </h1>
@@ -57,10 +63,14 @@ function LandingPage() {
           </Link>
         </div>
         <div>
-          <img src={ImgLanding} alt="Nave Star Wars" />
+          <img
+            src={ImgLanding}
+            alt="Nave Star Wars"
+            className="hidden lg:block "
+          />
         </div>
         <div>
-          <ul className="flex flex-col justify-center gap-4 text-2xl text-[#39ff14] font-medium ">
+          <ul className="hidden lg:flex flex-col justify-center gap-4 text-2xl text-[#39ff14] font-medium ">
             <Link
               to={"/home"}
               className="hover:text-blue-400 flex items-center gap-2 transform hover:scale-125 transition-all"
@@ -78,9 +88,11 @@ function LandingPage() {
       </div>
 
       {/* Footer */}
-      <div className="flex justify-center bg-black">
+      <div className="absolute bottom-3 left-16 md:right-3 md:flex md:justify-center bg-black">
         <footer>
-          <p className="text-gray-300/50">©Facu Guardia for Kairox Lab - 2023</p>
+          <p className="text-gray-300/50">
+            ©Facu Guardia for Kairox Lab - 2023
+          </p>
         </footer>
       </div>
     </div>

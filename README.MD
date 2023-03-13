@@ -1,4 +1,4 @@
-# Kairox Lab Star Wars API Challenge
+# Star Wars App - Challenge Kairox Lab
 
 ## Este proyecto es un desafío para la empresa Kairox Lab que tiene como objetivo mostrar una lista de personajes de Star Wars en pantalla. Los usuarios pueden buscar personajes por nombre y, al hacer clic en uno, se muestra toda la información disponible sobre el personaje. Los usuarios también pueden agregar personajes a una lista de favoritos y eliminarlos más tarde. El proyecto es 100% responsive design.
 

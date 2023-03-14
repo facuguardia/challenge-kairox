@@ -48,11 +48,7 @@ Si deseas contribuir a este proyecto, puedes hacerlo abriendo un **issue** o un 
 
 #
 
-[![DS-1.png](https://i.postimg.cc/mZPR2jDh/DS-1.png)](https://postimg.cc/Cdp9cjbV)
-
-[![DS-2.png](https://i.postimg.cc/CKvTwnpj/DS-2.png)](https://postimg.cc/rdtYJmmm)
-
-[![DS-2.png](https://i.postimg.cc/CKvTwnpj/DS-2.png)](https://postimg.cc/rdtYJmmm)
+[![desktop.png](https://i.postimg.cc/hvySfYx4/desktop.png)](https://postimg.cc/MfBkLddg)
 
 #
 
@@ -61,9 +57,5 @@ Si deseas contribuir a este proyecto, puedes hacerlo abriendo un **issue** o un 
 #
 
 [![MB-1.png](https://i.postimg.cc/VNhG7qcH/MB-1.png)](https://postimg.cc/5HwSyFyw)
-
-[![MB-3.png](https://i.postimg.cc/VN0Bk23D/MB-3.png)](https://postimg.cc/Y4kmXD2W)
-
-[![MB-3.png](https://i.postimg.cc/VN0Bk23D/MB-3.png)](https://postimg.cc/Y4kmXD2W)
 
 #

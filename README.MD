@@ -48,7 +48,7 @@ Si deseas contribuir a este proyecto, puedes hacerlo abriendo un **issue** o un 
 
 #
 
-[![desktop.png](https://i.postimg.cc/hvySfYx4/desktop.png)](https://postimg.cc/MfBkLddg)
+[![app-kairox.png](https://i.postimg.cc/qB10XgDN/app-kairox.png)](https://postimg.cc/z3H9qDrN)
 
 #
 
